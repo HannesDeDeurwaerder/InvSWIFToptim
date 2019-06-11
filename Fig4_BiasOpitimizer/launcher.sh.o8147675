@@ -1,0 +1,28 @@
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 13 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 15 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 1 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 12 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+[0] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 9 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 3 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 4 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 8 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 16 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 2 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 10 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 14 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 7 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 11 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+[11] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00012 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 5 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+Executing echo "source('script.R')"| R --vanilla of every 16th line starting with line 6 of /kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001/joblist.txt
+[8] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00009 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[2] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00003 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[3] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00004 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[7] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00008 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[1] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00002 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[9] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00010 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[6] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00007 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[10] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00011 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[4] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00005 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt
+[5] cwd=/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00006 exec=echo "source('script.R')"| R --vanilla 2>stderr.txt >stdout.txt

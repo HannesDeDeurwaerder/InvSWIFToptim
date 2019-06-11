@@ -1,0 +1,13 @@
+echo "source('script.R')"| R --vanilla
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00001
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00002
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00003
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00004
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00005
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00006
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00007
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00008
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00009
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00010
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00011
+/kyukon/data/gent/vo/000/gvo00074/felicien/R/InvSWIFToptim/Fig4_BiasOpitimizer/runs/run_00012

@@ -1,0 +1,9 @@
+Package 'sm', version 2.2-5.6: type help(sm) for summary information
+
+Attaching package: ‘ks’
+
+The following object is masked from ‘package:sm’:
+
+    binning
+
+There were 50 or more warnings (use warnings() to see the first 50)

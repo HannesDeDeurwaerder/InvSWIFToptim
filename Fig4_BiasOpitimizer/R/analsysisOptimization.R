@@ -22,6 +22,7 @@ source('./R/functionRandomDataToIsospace.R')
 source("./R/functionLogLik.R")
 
 
+
 # select a true beta value
 Bs=10  # number of itterations over beta treus
 Btrues= runif(Bs, min = 0.905, max = 0.995)
