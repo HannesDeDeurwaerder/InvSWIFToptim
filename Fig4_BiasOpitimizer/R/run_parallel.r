@@ -88,7 +88,7 @@ for (ifolder in seq(folder_all)){
   
   launcher_file <- file.path(folder,'launcher.sh')
   writeLines("#!/bin/bash",con = launcher_file)
-  write("ml R/3.4.4-intel-2018a-X11-20180131",file=launcher_file,append=TRUE)
+  write("ml R",file=launcher_file,append=TRUE)
   write(paste("mpirun",file.path(maindir,"modellauncher","modellauncher"),job_list_file),file=launcher_file,append=TRUE)
 }
 
