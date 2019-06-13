@@ -37,8 +37,11 @@ scenarios <- 4
 # define/load the optimization function
 itterations=100
 RunForWhichIsotope='Both'
-    
-scenario_FD='Sc4'      # nature equals strongest scenario
+
+# sampling scenarios
+scenario_withSWIFT='Sc4'      # nature equals strongest scenario
+scenario_withoutSWIFT='Sc5'      # nature equals strongest scenario, however, no SWIFT 
+                          # sampling strategy used
 
 # Submission parameters
 args <- c('-l walltime=12:00:00','-l nodes=1:ppn=16')
@@ -55,10 +58,18 @@ for (iBs in seq(Bs)){
   for (iFD in seq(FDtotal)){
     FDitter=FDtotal[iFD]   # number of samples to generate
     
-    # start.time <- Sys.time()
-    FD<-RandomDataToIsospace(FDitter, B, scenario_FD,Btrue,"Both",Z, relSF,dZ, TCOR, t, tF, Meissner, n) 
-    
+    # start.time <- Sys.time()   
     for (iscenar in seq(scenarios)){
+        
+        # selection of the field data: SWIFT or NO SWIFT
+          # SAMPLED WITHOUT SWIFT (Scenario A&B, corresponding to iscenar 1&2)
+          if(iscenar==1 | iscenar==2){
+            FD<-RandomDataToIsospace(FDitter, B, scenario_withoutSWIFT,Btrue,"Both",Z, relSF,dZ, TCOR, t, tF, Meissner, n) 
+          }
+          # SAMPLES WITH SWIFT
+          if(iscenar==3 | iscenar==4){
+            FD<-RandomDataToIsospace(FDitter, B, scenario_withSWIFT,Btrue,"Both",Z, relSF,dZ, TCOR, t, tF, Meissner, n) 
+          } 
         
         folder <- file.path(getwd(),'runs',paste0('run_',sprintf('%05i',compt)))
         dir.create(folder)
