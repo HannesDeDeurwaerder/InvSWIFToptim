@@ -91,7 +91,7 @@ for (ifolder in seq(folder_all)){
   simus <- seq(folder_all[ifolder],min(Nruns,folder_all[ifolder]+run_per_nodes-1))
   
   job_list_file <- file.path(folder,'joblist.txt')
-  writeLines(paste0("echo ",'"',"source('script.R')",'"',"| R --vanilla"),con = job_list_file)
+  writeLines(paste0("echo ",'"',"source('script.R')",'"',"| R --save"),con = job_list_file)
   
   cmd_l <- lapply(simus,function(sim){
   line <- file.path(dirname(folder),paste0('run_',sprintf('%05i',sim)))
