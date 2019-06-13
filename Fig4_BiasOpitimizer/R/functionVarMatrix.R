@@ -17,7 +17,8 @@ VarMatrix <- function(itterations=NULL, scenario=NULL, beta=NULL){
   if(scenario=="Sc2"){rest=Scenarios[,2]}
   if(scenario=="Sc3"){rest=Scenarios[,3]}
   if(scenario=="Sc4"){rest=Scenarios[,4]}
-  
+  if(scenario=="Sc5"){rest=Scenarios[,5]}
+
   # create empty data matrix
   Datamatrix=matrix(NA,itterations,ncol=11)
   Names <- c("DBH","Area_alg", "SFtot_alg","ARtot",
