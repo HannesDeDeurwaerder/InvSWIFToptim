@@ -31,7 +31,7 @@ source("./R/create_Rscript_SWIFT.r")
 # select a true beta value
 Bs=1  # number of itterations over beta trues
 Btrues= runif(Bs, min = 0.905, max = 0.995)
-FDtotal=c(5,10,25)
+FDtotal=c(5,25,50)
 scenarios <- 4
     
 # define/load the optimization function
