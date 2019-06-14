@@ -9,5 +9,5 @@ ml R; ulimit -s unlimited
 cd /user/gent/408/vsc40883/InvSWIFToptim/Fig4_BiasOpitimizer
 
 
-echo "source('./R/run_parallel.r')" | R --safe
+echo "source('./R/run_parallel.r')" | R --save
 
