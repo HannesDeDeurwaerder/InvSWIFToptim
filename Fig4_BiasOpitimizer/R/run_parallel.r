@@ -76,7 +76,7 @@ for (iBs in seq(Bs)){
         write.csv(FD, file = file.path(folder,paste0( "FD_Btrue_",iBs,"_FD_",FDtotal[iFD],"_scenario_",iscenar,".csv")))
        
         script_file <- file.path(folder,paste0("script",'.R'))
-        create_Rscript_SWIFT(script_file,itterations=itterations,RunForWhichIsotope=RunForWhichIsotope,scenario=iscenar,Btrue = Btrue,run_id=compt)
+        create_Rscript_SWIFT(script_file,itterations=itterations,RunForWhichIsotope=RunForWhichIsotope,scenario=iscenar,Btrue = Btrue,run_id=compt,N_FD = FDitter,iBs = iBs)
         compt <- compt + 1
     }
   }

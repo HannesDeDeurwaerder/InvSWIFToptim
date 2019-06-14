@@ -32,8 +32,10 @@ create_Rscript_SWIFT <- function(file,itterations=10,RunForWhichIsotope='Both',s
   write("",file=file,append=TRUE)
   write(paste("folder <-paste0('./runs/run_',sprintf('%05i',run_id))"),file=file,append=TRUE)
   write(paste("setwd(folder)"),file=file,append=TRUE)
-  write("FD_file <- list.files(getwd(),pattern = 'FD_*')",file=file,append=TRUE)  
-  write("FD <- read.csv(file.path(getwd(),FD_file))",file=file,append=TRUE)
+  #write("FD_file <- list.files(getwd(),pattern = 'FD_*')",file=file,append=TRUE)  
+  #write("FD <- read.csv(file.path(getwd(),FD_file))",file=file,append=TRUE)
+  write("FD_file <- file.path(paste0('FD_Btrue_',iBs,'_FD_',N_FD,'_scenario_',scenario,'.csv'))",file=file,append=TRUE)  
+  write("FD <- read.csv(FD_file)",file=file,append=TRUE)
   
   write("",file=file,append=TRUE)
   write(paste("setwd('../../')"),file=file,append=TRUE)
