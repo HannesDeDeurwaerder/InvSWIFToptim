@@ -1,4 +1,4 @@
-create_Rscript_SWIFT <- function(file,itterations=10,RunForWhichIsotope='Both',scenario=1,Btrue,run_id) {
+create_Rscript_SWIFT <- function(file,itterations=10,RunForWhichIsotope='Both',scenario=1,Btrue,run_id,N_FD,iBs) {
   
   writeLines("rm(list=ls())",con = file)
   
@@ -28,7 +28,9 @@ create_Rscript_SWIFT <- function(file,itterations=10,RunForWhichIsotope='Both',s
   write(paste("RunForWhichIsotope = ",paste0("'",RunForWhichIsotope,"'")),file=file,append=TRUE)
   write(paste("scenario = ",scenario),file=file,append=TRUE)
   write(paste("run_id = ",run_id),file=file,append=TRUE)
-  
+  write(paste("N_FD = ",N_FD),file=file,append=TRUE)
+  write(paste("iBs = ",iBs),file=file,append=TRUE)  
+
   write("",file=file,append=TRUE)
   write(paste("folder <-paste0('./runs/run_',sprintf('%05i',run_id))"),file=file,append=TRUE)
   write(paste("setwd(folder)"),file=file,append=TRUE)
