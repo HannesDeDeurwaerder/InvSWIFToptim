@@ -35,7 +35,7 @@ FDtotal=c(5,25,50)
 scenarios <- 4
     
 # define/load the optimization function
-itterations=100
+itterations=250
 RunForWhichIsotope='Both'
 
 # sampling scenarios
