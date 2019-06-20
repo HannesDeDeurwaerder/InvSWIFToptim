@@ -80,104 +80,7 @@
 #' Felicien Meunier and Hans Verbeeck.
 #' 
 #' @examples
-#' \dontrun{
-#' 
-#' # Initialisation of parameters
-#'   n   <- 20            # Multiple number of days studied, needed for spin up 
-#'                        # of the model.
-#'   tF  <- 60            # Time frequence of measurements per hour 
-#'                        # [in measurments per h].
-#'   t   <- seq(0,24*n,length.out = 24*tF*n)     # Discrete time vector [in h].
-#'   dZ  <- 0.001         # Thickness of sampled layer [in m].
-#'   rho <- 1000          # Density of water [kg m^(-3)].
-#'   L   <- 1             # maximum soil depth [in m].
-#'   Z   <- seq(dZ,L,dZ)  # Discrete depth vector centered [in m].
-#'   kr  <- 10*10^(-10)   # root membrane permeability [in s^(-1)] 
-#'                        # (source: Leuschner et al, 2004).
-#'   As  <- 1             # Soil surface area covering the roots [in m^2].
-#'   r   <- 0.0005        # Effective root radius [in m].
-#'   DBH <- 0.213         # Diameter at breast height [in m].
-#'   LA  <- 0.136         # Lumen Fraction, i.e. lumen area/sapwood area [%]
-#'                        # (derived from Zanne et al, 2010) [table 2, F-value].            
-#'   Ax  <- LA * ((1.582*((DBH*100)^1.764)) /10^4)       
-#'                        # Total lumen area of the studied tree [m^2],i.e. the 
-#'                        # lumena area fraction multiplied by sapwood area 
-#'                        # estimated from the DBH (Meinzer et al, 2001) . 
-#'   R0  <- -438688       # Derived from Huang et al, 2017.
-#'   beta<- 0.966         # Derived from Jackson et al., 1996 [table 1, 
-#'                        # beta-term].
-#'
-#' # Source the SWIFT model
-#'   require("SWIFT")
-#'
-#' 
-#' # Prepare additional input data of the model
-#'   data(SFday)     
-#'    # SF for one day, time frequency: every min, expressed in [kg h-1].
-#'    # This data is derived from Huang et al, 2017.
-#'     uch <- 60*60              # unit conversion: h to sec.
-#'     SF  <- c(rep(SFday,n))/(uch) # repetition of SF day over n prefered days.
-#'    
-#' # Soil water potential curve with depth, from Meissner et al, 2012
-#'    CTpsi <- 101.97      # Conversion factor between MPa and m H2O.
-#'    Apsi  <- 198.4455;  Bpsi <- 448.9092;  Cpsi <- 255.5937; 
-#'      # Apsi, Bpsi and Cpsi are values derived from  Meissner et al 2012 data
-#'      # from optimizing the function defined in the paper of De Deurwaerder 
-#'      # et al.  (In Review).
-#'    PSIs  <- ((Apsi + Bpsi *log(Z) - Cpsi*Z^2) /10000) * CTpsi
-#'  
-#' # isotopic water isotopic signature with depth from Meissner et al, 2012
-#'    lsoil   <- -73.98008;  msoil <- 0.148735;  soildev <- 0.001  
-#'      # lsoil and msoil are values derived from the Meissner et al 2012 data
-#'      # from optimizing the function defined in the paper of De Deurwaerder 
-#'      # et al. (In Review).
-#'    D2Hsoil <- lsoil * (Z+soildev)^msoil
-#'    
-#'  # NOTE that the data of Meissner et al 2012 is accessible and can be sourced
-#'  # as provided below:
-#'    data(MeissnerData)
-#'         
-#'
-#'  # Using the SWIFT model functions
-#'   
-#'        # A. Root density distribution 
-#'        B <- Bprep(beta, R0, Z) # output is in [m m^(-3)].
-#'        
-#'        # B. the soil-root conductance
-#'        k <- SoilRootCond(B, kr, PSIs, Z, 'Silt Loam')
-#'        
-#'        # C. Isotopic signature fluctuation at stem base
-#'        StemBase <- SWIFT_SB(As, B, D2Hsoil, dZ, k,  PSIs,  r, rho, t, Z)
-#'        
-#'        # D. Isotopic signature at specific height and time
-#'        tstud <- seq(2*(24*tF), 3*(24*tF),1)    
-#'           # Provides the data of day 3 of the modeled tree. 
-#'           # (We selected day 3 to assure proper spin up of the model).
-#'        hom   <- 1.3  # measured at standard coring height, 1.3 m.
-#'        D2Htree <- SWIFT_H( Ax, StemBase,  hom, SF, tstud, tF)
-#'        
-#'        # E. The Water potential at stem base
-#'        PSI0vec <- PSI0calc(As, B, dZ, k,  PSIs,  rho, t, Z)/CTpsi  
-#'           # CTpsi to convert from m to MPa.     
-#'        
-#'        
-#'  # Field data corroborating the hypothesis of strong isotopic fluctuations 
-#'  # along the length of a stem:
-#'    data(Fielddata)
-#'  
-#'  
-#'  # Making a simple plot of the SWIFT output
-#'
-#'    ylabel=expression(paste(delta,"2H"['X']*" [permil, vsmow]"))	
-#'       # Provide a y-axis label.
-#'    plot(t,StemBase, xlim= c( min(tstud)/tF, max(tstud)/tF ), type='l', 
-#'         lty=2, col='grey', ylab=ylabel, xlab='timesteps')	
-#'       # Plot the signature fluctuations at the stem base.
-#'    lines( tstud/tF, D2Htree, col='blue')	
-#'       # Plot the signature fluctuations at the height defined by the user.
-#'    legend( 'bottomleft', c('at stembase',paste0('at ',hom,' m')), lty=c(2,1),
-#'            col=c('grey', 'blue'), bty='n', cex=0.7)	# add a legend. 
-#'                    
+#' \dontrun{             
 #' load()
 #'	}
 #'	
@@ -418,7 +321,7 @@ Bprep<-function( beta=NULL, R0=NULL, Z=NULL){
   UnCo <- 100 # unit conversion from m to cm.
   
   for (h in 1:length(Z)){
-    B[h]= abs(R0* beta^(UnCo*Z[h])*log(beta, base=exp(1)))    
+    B[h]= -R0* beta^(UnCo*Z[h])*log(beta, base=exp(1))    
   }
   
   return(B)
