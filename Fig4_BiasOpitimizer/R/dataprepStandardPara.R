@@ -24,7 +24,6 @@ relSF <- (SF/ sum(SFdayA))/tF   # multiply by n to have the entire period but
 Meissner<-read.csv("./data/DeuteriumPsi.csv")
 
 # B is kept standard over all runs!!
-Bbeta=0.962
-Ltot=10000 #10km per m3 conform Soethe, Lehman and Engels 2006
-BR0=(Ltot*100)/(1-Bbeta^100)
+Bbeta=0.95
+BR0=438688
 B<-Bprep(Bbeta, BR0, Z)
