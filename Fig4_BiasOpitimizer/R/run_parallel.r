@@ -29,7 +29,7 @@ source("./R/create_Rscript_SWIFT.r")
 ###########################################################
 ## Parameters
 # select a true beta value
-Bs=10  # number of itterations over beta trues
+Bs=5  # number of itterations over beta trues
 Btrues= runif(Bs, min = 0.905, max = 0.995)
 FDtotal=c(5,25,50)
 scenarios <- 4
@@ -44,7 +44,7 @@ scenario_withoutSWIFT='Sc5'      # nature equals strongest scenario, however, no
                           # sampling strategy used
 
 # Submission parameters
-args <- c('-l walltime=12:00:00','-l nodes=1:ppn=16')
+args <- c('-l walltime=06:00:00','-l nodes=1:ppn=16')
 run_per_nodes <- 100
 
 ###########################################################
